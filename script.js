@@ -53,6 +53,7 @@ function setLanguage(lang) {
   document.querySelector('.menu-toggle').setAttribute('aria-label', currentLanguage === 'it' ? 'Apri menu' : 'Open menu');
   document.querySelectorAll('[data-site-link]').forEach((link) => { link.href = `https://infn-argus.github.io/argus-knowledge-hub/${currentLanguage}/`; });
   document.querySelectorAll('[data-root-link]').forEach((link) => { link.href = `https://infn-argus.github.io/?lang=${currentLanguage}`; });
+  document.querySelectorAll('[data-epics-link]').forEach((link) => { link.href = `https://infn-epics.github.io/?lang=${currentLanguage}`; });
   document.title = currentLanguage === 'it' ? 'ARGUS — La conoscenza in movimento' : 'ARGUS — Knowledge in motion';
   document.querySelector('meta[name="description"]').content = currentLanguage === 'it'
     ? 'ARGUS unisce AI, knowledge graph e conoscenza operativa per gestire asset, documenti, ticket e progetti complessi.'
