@@ -1,7 +1,7 @@
 const translations = {
   it: {
     skip: 'Vai al contenuto',
-    navVision: 'Visione', navPlatform: 'Piattaforma', navAi: 'AI responsabile', navScenarios: 'Scenari', navAccess: 'Accedi', navContact: 'Scopri ARGUS',
+    navVision: 'Visione', navPlatform: 'Piattaforma', navAi: 'AI responsabile', navScenarios: 'Scenari', navAccess: 'Accedi', navContact: 'Scopri ARGUS', orgHome: 'Home ARGUS',
     heroEyebrow: 'PROGETTO ARGUS · INFN CSN5', heroTitle1: 'La conoscenza', heroTitle2: 'dietro ogni macchina.', heroLead: 'Dalle infrastrutture scientifiche ai servizi complessi: ARGUS collega ciò che esiste, ciò che accade e ciò che sappiamo. Per trasformare informazioni disperse in decisioni migliori.', heroPrimary: 'Esplora Knowledge Hub', heroSecondary: 'Il progetto ARGUS', heroFootnote: 'AI · KNOWLEDGE GRAPH · OPERAZIONI', scroll: 'SCORRI PER ESPLORARE',
     vizMachine: 'TOPOLOGIA DELLA MACCHINA', vizContext: 'CONTESTO OPERATIVO', cardAssetLabel: 'ASSET', cardAssetType: 'Sistema di potenza · Linac', cardTicketLabel: 'TICKET', cardTicketTitle: 'Intervento dopo il riavvio', cardTicketType: 'Collegato a RF Modulator M-2', cardTicketStatus: 'APERTO', cardDocLabel: 'DOCUMENTO', cardDocTitle: 'Procedura di verifica RF', cardDocType: 'Revisione approvata', visualCaption: 'Un quadro operativo connesso',
     proofIntro: 'UNA BASE DI CONOSCENZA OPERATIVA PER', proofProjects: 'PROGETTI',
@@ -17,7 +17,7 @@ const translations = {
   },
   en: {
     skip: 'Skip to content',
-    navVision: 'Vision', navPlatform: 'Platform', navAi: 'Responsible AI', navScenarios: 'Use cases', navAccess: 'Get access', navContact: 'Discover ARGUS',
+    navVision: 'Vision', navPlatform: 'Platform', navAi: 'Responsible AI', navScenarios: 'Use cases', navAccess: 'Get access', navContact: 'Discover ARGUS', orgHome: 'ARGUS home',
     heroEyebrow: 'ARGUS PROJECT · INFN CSN5', heroTitle1: 'The knowledge', heroTitle2: 'behind every machine.', heroLead: 'From scientific infrastructure to complex services, ARGUS connects what exists, what happens and what we know. Turning scattered information into better decisions.', heroPrimary: 'Explore Knowledge Hub', heroSecondary: 'The ARGUS project', heroFootnote: 'AI · KNOWLEDGE GRAPH · OPERATIONS', scroll: 'SCROLL TO EXPLORE',
     vizMachine: 'MACHINE TOPOLOGY', vizContext: 'OPERATIONAL CONTEXT', cardAssetLabel: 'ASSET', cardAssetType: 'Power system · Linac', cardTicketLabel: 'TICKET', cardTicketTitle: 'Intervention after restart', cardTicketType: 'Linked to RF Modulator M-2', cardTicketStatus: 'OPEN', cardDocLabel: 'DOCUMENT', cardDocTitle: 'RF verification procedure', cardDocType: 'Approved revision', visualCaption: 'One connected operational picture',
     proofIntro: 'AN OPERATIONAL KNOWLEDGE BASE FOR', proofProjects: 'PROJECTS',
@@ -52,6 +52,7 @@ function setLanguage(lang) {
   });
   document.querySelector('.menu-toggle').setAttribute('aria-label', currentLanguage === 'it' ? 'Apri menu' : 'Open menu');
   document.querySelectorAll('[data-site-link]').forEach((link) => { link.href = `https://infn-argus.github.io/argus-knowledge-hub/${currentLanguage}/`; });
+  document.querySelectorAll('[data-root-link]').forEach((link) => { link.href = `https://infn-argus.github.io/?lang=${currentLanguage}`; });
   document.title = currentLanguage === 'it' ? 'ARGUS — La conoscenza in movimento' : 'ARGUS — Knowledge in motion';
   document.querySelector('meta[name="description"]').content = currentLanguage === 'it'
     ? 'ARGUS unisce AI, knowledge graph e conoscenza operativa per gestire asset, documenti, ticket e progetti complessi.'
