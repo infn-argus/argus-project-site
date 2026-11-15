@@ -6,6 +6,10 @@ The language switch translates all page sections and updates the shareable `?lan
 
 The graph and AI panels are illustrative presentations of ARGUS Knowledge Hub concepts. The two demo scenarios use synthetic examples. Text is based on the current ARGUS Knowledge Hub repository documentation.
 
+The use-case section links to four ARGUS Knowledge Hub walkthroughs: IT services
+and accelerator operations, each in English and Italian. Video thumbnails load
+from YouTube, and playback opens on YouTube when selected.
+
 ## Files
 
 - `index.html` — content and page structure
